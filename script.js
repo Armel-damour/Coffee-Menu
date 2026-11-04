@@ -16,6 +16,40 @@
     });
   };
 
+  const hero = document.querySelector(".hero");
+  const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const pointerPreference = window.matchMedia("(hover: hover) and (pointer: fine)");
+
+  if (hero && pointerPreference.matches && !motionPreference.matches) {
+    hero.addEventListener("pointermove", (event) => {
+      const bounds = hero.getBoundingClientRect();
+      const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+      const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+
+      hero.style.setProperty("--hero-tilt-x", `${-y * 3}deg`);
+      hero.style.setProperty("--hero-tilt-y", `${x * 3}deg`);
+      hero.style.setProperty("--cup-x", `${x * 10}px`);
+      hero.style.setProperty("--cup-y", `${y * 8}px`);
+      hero.style.setProperty("--beans-x", `${-x * 12}px`);
+      hero.style.setProperty("--beans-y", `${-y * 8}px`);
+      hero.style.setProperty("--orbit-x", `${x * 8}px`);
+      hero.style.setProperty("--orbit-y", `${y * 8}px`);
+    });
+
+    hero.addEventListener("pointerleave", () => {
+      [
+        "--hero-tilt-x",
+        "--hero-tilt-y",
+        "--cup-x",
+        "--cup-y",
+        "--beans-x",
+        "--beans-y",
+        "--orbit-x",
+        "--orbit-y",
+      ].forEach((property) => hero.style.removeProperty(property));
+    });
+  }
+
   if (!("IntersectionObserver" in window)) {
     revealItems.forEach((item) => item.classList.add("is-visible"));
     return;
