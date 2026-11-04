@@ -2,61 +2,135 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cafe Menu</title>
-    <link href="styles.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Explore the coffee and dessert menu at NeXa Coffee."
+    />
+    <title>NeXa Coffee | Coffee &amp; Desserts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../CSS/styles.css" rel="stylesheet" />
+    <script src="../script.js" defer></script>
   </head>
   <body>
-    <div class="menu">
-      <main>
-        <h1>CAMPER CAFE</h1>
-        <p class="established">Est. 2020</p>
-        <hr>
-        <section>
-          <h2>Coffee</h2>
-          <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg" alt="coffee icon"/>
-          <article class="item">
-            <p class="flavor">French Vanilla</p><p class="price">3.00</p>
-          </article>
-          <article class="item">
-            <p class="flavor">Caramel Macchiato</p><p class="price">3.75</p>
-          </article>
-          <article class="item">
-            <p class="flavor">Pumpkin Spice</p><p class="price">3.50</p>
-          </article>
-          <article class="item">
-            <p class="flavor">Hazelnut</p><p class="price">4.00</p>
-          </article>
-          <article class="item">
-            <p class="flavor">Mocha</p><p class="price">4.50</p>
-          </article>
-        </section>
-        <section>
-          <h2>Desserts</h2>
-          <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/pie.jpg" alt="pie icon"/>
-          <article class="item">
-            <p class="dessert">Donut</p><p class="price">1.50</p>
-          </article>
-          <article class="item">
-            <p class="dessert">Cherry Pie</p><p class="price">2.75</p>
-          </article>
-          <article class="item">
-            <p class="dessert">Cheesecake</p><p class="price">3.00</p>
-          </article>
-          <article class="item">
-            <p class="dessert">Cinnamon Roll</p><p class="price">2.50</p>
-          </article>
-        </section>
-      </main>
-      <hr class="bottom-line">
-      <footer>
-        <address>
-          <p>
-            <a href="https://www.freecodecamp.org" target="_blank">Visit our website</a>
+    <div class="page-grain" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow hero-reveal">
+            Est. 2020 <span aria-hidden="true">·</span> Made for the moment
           </p>
-          <p class="address">123 Free Code Camp Drive</p>
-        </address>
-      </footer>
-    </div>
+          <h1 class="hero-reveal">NeXa <span>Coffee</span></h1>
+          <p class="hero-tagline hero-reveal">
+            A slower sip. A sweeter moment.
+          </p>
+          <a class="button hero-reveal" href="#coffee">Explore the menu</a>
+        </div>
+
+        <div class="steam" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="cup-scene" aria-hidden="true">
+          <div class="saucer"></div>
+          <div class="cup">
+            <span class="cup-handle"></span>
+            <span class="cup-rim"></span>
+            <span class="cup-coffee"></span>
+          </div>
+        </div>
+        <span class="hero-orbit" aria-hidden="true"></span>
+      </div>
+
+    </header>
+
+    <nav class="category-nav" aria-label="Menu categories">
+      <div class="category-nav-inner">
+        <span class="nav-label">On the menu</span>
+        <a class="category-link" href="#coffee" aria-current="location">Coffee</a>
+        <a class="category-link" href="#desserts">Desserts</a>
+      </div>
+    </nav>
+
+    <main class="menu-shell">
+      <div class="menu-intro reveal">
+        <p class="eyebrow">Good things, made simple</p>
+        <p>Find your favorite, or stay a little curious.</p>
+      </div>
+
+      <section class="menu-section reveal" id="coffee" aria-labelledby="coffee-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Warm &amp; comforting</p>
+            <h2 id="coffee-title">Coffee</h2>
+          </div>
+          <span class="section-number" aria-hidden="true">01</span>
+        </div>
+
+        <div class="menu-list">
+          <article class="menu-item reveal">
+            <p class="item-name">French Vanilla</p>
+            <p class="item-price"><span class="visually-hidden">Price: </span>3.00</p>
+          </article>
+          <article class="menu-item reveal">
+            <p class="item-name">Caramel Macchiato</p>
+            <p class="item-price"><span class="visually-hidden">Price: </span>3.75</p>
+          </article>
+          <article class="menu-item reveal">
+            <p class="item-name">Pumpkin Spice</p>
+            <p class="item-price"><span class="visually-hidden">Price: </span>3.50</p>
+          </article>
+          <article class="menu-item reveal">
+            <p class="item-name">Hazelnut</p>
+            <p class="item-price"><span class="visually-hidden">Price: </span>4.00</p>
+          </article>
+          <article class="menu-item reveal">
+            <p class="item-name">Mocha</p>
+            <p class="item-price"><span class="visually-hidden">Price: </span>4.50</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="menu-section reveal" id="desserts" aria-labelledby="desserts-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">A little something sweet</p>
+            <h2 id="desserts-title">Desserts</h2>
+          </div>
+          <span class="section-number" aria-hidden="true">02</span>
+        </div>
+
+        <div class="menu-list">
+          <article class="menu-item reveal">
+            <p class="item-name">Donut</p>
+            <p class="item-price"><span class="visually-hidden">Price: </span>1.50</p>
+          </article>
+          <article class="menu-item reveal">
+            <p class="item-name">Cherry Pie</p>
+            <p class="item-price"><span class="visually-hidden">Price: </span>2.75</p>
+          </article>
+          <article class="menu-item reveal">
+            <p class="item-name">Cheesecake</p>
+            <p class="item-price"><span class="visually-hidden">Price: </span>3.00</p>
+          </article>
+          <article class="menu-item reveal">
+            <p class="item-name">Cinnamon Roll</p>
+            <p class="item-price"><span class="visually-hidden">Price: </span>2.50</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p class="footer-mark" aria-hidden="true">NC</p>
+      <p class="footer-note">NeXa Coffee <span aria-hidden="true">·</span> Est. 2020</p>
+    </footer>
   </body>
 </html>
