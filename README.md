@@ -1,4 +1,4 @@
-Coffe Menu.
+Premium Coffee Menu.
 Single-page coffee shop website designed with an elegant.
 Minimalist aesthetic. 
 Built for quick loading speeds and fluid mobile responsiveness.
